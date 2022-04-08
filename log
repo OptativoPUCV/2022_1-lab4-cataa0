@@ -2,3 +2,42 @@ Fri Apr  8 15:06:30 UTC 2022:
  tests:  0|6
 total_score: 0/70
 a90b196
+Fri Apr  8 15:57:29 UTC 2022: 
+ hashmap.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:55:3: error: unknown type name ‘Hashmap’; did you mean ‘HashMap’?
+   Hashmap *aux=(Hashmap*)malloc(sizeof(Hashmap));
+   ^~~~~~~
+   HashMap
+hashmap.c:55:17: error: ‘Hashmap’ undeclared (first use in this function); did you mean ‘HashMap’?
+   Hashmap *aux=(Hashmap*)malloc(sizeof(Hashmap));
+                 ^~~~~~~
+                 HashMap
+hashmap.c:55:17: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:55:25: error: expected expression before ‘)’ token
+   Hashmap *aux=(Hashmap*)malloc(sizeof(Hashmap));
+                         ^
+hashmap.c:56:6: error: request for member ‘buckets’ in something not a structure or union
+   aux->buckets=(Pair**)malloc(sizeof(Pair*)*capacity);
+      ^~
+hashmap.c:57:6: error: request for member ‘capacity’ in something not a structure or union
+   aux->capacity=capacity;
+      ^~
+hashmap.c:58:6: error: request for member ‘size’ in something not a structure or union
+   aux->size=size;
+      ^~
+hashmap.c:58:13: error: ‘size’ undeclared (first use in this function); did you mean ‘sinl’?
+   aux->size=size;
+             ^~~~
+             sinl
+hashmap.c:59:6: error: request for member ‘current’ in something not a structure or union
+   aux->current=-1;
+      ^~
+hashmap.c:60:12: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+     return aux;
+            ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+d295516
