@@ -41,3 +41,15 @@ hashmap.c:60:12: error: return from incompatible pointer type [-Werror=incompati
 cc1: all warnings being treated as errors
 Compilation failed
 d295516
+Fri Apr  8 15:58:24 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:58:13: error: ‘size’ undeclared (first use in this function); did you mean ‘sinl’?
+   aux->size=size;
+             ^~~~
+             sinl
+hashmap.c:58:13: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+09f3311
