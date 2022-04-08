@@ -53,3 +53,14 @@ hashmap.c:58:13: error: ‘size’ undeclared (first use in this function); did 
 hashmap.c:58:13: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 09f3311
+Fri Apr  8 15:58:47 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:58:12: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+   aux->size=sinl;
+            ^
+cc1: all warnings being treated as errors
+Compilation failed
+8a08029
