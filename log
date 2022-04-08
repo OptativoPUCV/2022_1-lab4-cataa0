@@ -81,3 +81,17 @@ Fri Apr  8 15:59:27 UTC 2022:
  tests:  1|5
 total_score: 10/70
 cbcfb70
+Fri Apr  8 16:08:14 UTC 2022: 
+ hashmap.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:57:10: error: expected identifier or ‘(’ before ‘=’ token
+   for(int=0;i<capacity;i++){
+          ^
+hashmap.c:57:13: error: ‘i’ undeclared (first use in this function)
+   for(int=0;i<capacity;i++){
+             ^
+hashmap.c:57:13: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+c30b263
