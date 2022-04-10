@@ -388,3 +388,9 @@ hashmap.c:76:8: error: variable ‘aux’ set but not used [-Werror=unused-but-s
 cc1: all warnings being treated as errors
 Compilation failed
 85dc560
+Sun Apr 10 17:29:13 UTC 2022: 
+ hashmap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ tests:  9|3
+total_score: 40/70
+c699612
