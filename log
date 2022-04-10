@@ -199,3 +199,16 @@ hashmap.c:73:33: error: ‘HashMap {aka struct HashMap}’ has no member named �
                                  ^~
 Compilation failed
 b52182e
+Sun Apr 10 01:13:54 UTC 2022: 
+ hashmap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:74:39: error: expected ‘)’ before ‘{’ token
+     if(is_equal(key,map->buckets[aux]){
+                                       ^
+hashmap.c:78:3: error: expected expression before ‘}’ token
+   }
+   ^
+Compilation failed
+47208dc
