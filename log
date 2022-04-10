@@ -635,3 +635,14 @@ hashmap.c:64:37: error: ‘Pair {aka struct Pair}’ has no member named ‘size
                                      ^~
 Compilation failed
 bb7f292
+Sun Apr 10 20:26:09 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:64:18: error: self-comparison always evaluates to true [-Werror=tautological-compare]
+     if(map->size == map->size){
+                  ^~
+cc1: all warnings being treated as errors
+Compilation failed
+7226f1b
