@@ -580,3 +580,14 @@ hashmap.c:63:17: error: ‘aux’ may be used uninitialized in this function [-W
 cc1: all warnings being treated as errors
 Compilation failed
 7a71385
+Sun Apr 10 20:09:10 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+test.c: In function ‘enlarge’:
+hashmap.c:63:16: error: ‘aux’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+     old_buckets[aux]=NULL;
+                ^
+cc1: all warnings being treated as errors
+Compilation failed
+05a79c5
