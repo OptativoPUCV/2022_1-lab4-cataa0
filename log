@@ -405,3 +405,23 @@ hashmap.c:76:12: error: initialization makes integer from pointer without a cast
 cc1: all warnings being treated as errors
 Compilation failed
 35c84aa
+Sun Apr 10 17:32:55 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:76:12: error: invalid initializer
+   Pair aux=searchMap(map, key);
+            ^~~~~~~~~
+hashmap.c:77:6: error: used struct type value where scalar is required
+   if(aux){
+      ^~~
+hashmap.c:78:17: error: array subscript is not an integer
+     map->buckets[aux]->key=NULL;
+                 ^
+hashmap.c:76:8: error: variable ‘aux’ set but not used [-Werror=unused-but-set-variable]
+   Pair aux=searchMap(map, key);
+        ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+de93d49
