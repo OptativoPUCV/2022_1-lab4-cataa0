@@ -73,6 +73,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   while(map->buckets[aux] != NULL){
     if(is_equal(map->buckets[aux]->key, key)){
       map->current=aux;
+      return map->buckets[aux];
     }
     aux++;
   }
@@ -80,7 +81,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     return NULL;
   }
   
-  return map->buckets[aux];
+  return NULL;
 }
 
 Pair * firstMap(HashMap * map) {
