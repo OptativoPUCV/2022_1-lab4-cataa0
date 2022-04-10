@@ -111,12 +111,12 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
   long aux;
-  while(aux < map->capacity){
+  for(aux=map->current+1;aux<map->capacity;aux++){
     if(map->buckets[aux] != NULL){
       map->current=aux;
       return map->buckets[aux];
     }
-    aux++;
+    
   }
     return NULL;
 }
