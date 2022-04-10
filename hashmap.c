@@ -74,7 +74,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     aux++;
   }
   
-  return aux->buckets[aux];
+  return map->buckets[aux];
 }
 
 Pair * firstMap(HashMap * map) {
