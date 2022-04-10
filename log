@@ -189,3 +189,13 @@ Sun Apr 10 01:11:15 UTC 2022:
  tests:  1|5
 total_score: 10/70
 e01d0f3
+Sun Apr 10 01:11:52 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:73:33: error: ‘HashMap {aka struct HashMap}’ has no member named ‘is_equal’
+   while(map->buckets[aux] && map->is_equal(key,map->buckets[aux]) == 0){
+                                 ^~
+Compilation failed
+b52182e
