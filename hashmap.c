@@ -73,7 +73,7 @@ HashMap * createMap(long capacity) {
 }
 
 void eraseMap(HashMap * map,  char * key) { 
-  long aux=map->current;
+  long aux=searchMap(map, key);
   if(searchMap(map, key)){
     map->buckets[aux]->key=NULL;
     (map->size)--;

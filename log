@@ -394,3 +394,14 @@ Sun Apr 10 17:29:13 UTC 2022:
  tests:  9|3
 total_score: 40/70
 c699612
+Sun Apr 10 17:30:13 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:76:12: error: initialization makes integer from pointer without a cast [-Werror=int-conversion]
+   long aux=searchMap(map, key);
+            ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+35c84aa
