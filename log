@@ -487,3 +487,30 @@ Sun Apr 10 19:45:37 UTC 2022:
  tests:  16|1
 total_score: 60/70
 8f18c4c
+Sun Apr 10 20:03:55 UTC 2022: 
+ hashmap.c | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:58:21: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+   Pair *old_buckets=map->buckets;
+                     ^~~
+hashmap.c:61:45: error: ‘capacity’ undeclared (first use in this function)
+   map->buckets=(Pair**)malloc(sizeof(Pair*)*capacity);
+                                             ^~~~~~~~
+hashmap.c:61:45: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:68:31: error: invalid type argument of ‘->’ (have ‘Pair {aka struct Pair}’)
+     insertMap(old_buckets[aux]->key, old_buckets[aux]->value);
+                               ^~
+hashmap.c:68:54: error: invalid type argument of ‘->’ (have ‘Pair {aka struct Pair}’)
+     insertMap(old_buckets[aux]->key, old_buckets[aux]->value);
+                                                      ^~
+hashmap.c:68:5: error: too few arguments to function ‘insertMap’
+     insertMap(old_buckets[aux]->key, old_buckets[aux]->value);
+     ^~~~~~~~~
+hashmap.c:42:6: note: declared here
+ void insertMap(HashMap * map, char * key, void * value) {
+      ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5589e20

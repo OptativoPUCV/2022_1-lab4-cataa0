@@ -54,8 +54,19 @@ void insertMap(HashMap * map, char * key, void * value) {
 }
 
 void enlarge(HashMap * map) {
-    enlarge_called = 1; //no borrar (testing purposes)
-
+  enlarge_called = 1; //no borrar (testing purposes)
+  Pair *old_buckets=map->buckets;
+  map->capacity *=2;
+  long aux;
+  map->buckets=(Pair**)malloc(sizeof(Pair*)*capacity);
+  while(map->buckets != NULL){
+    map->buckets[aux]=NULL;
+  }
+  aux++;
+  map->size=0;
+  if(old_buckets!=NULL){
+    insertMap(old_buckets[aux]->key, old_buckets[aux]->value);
+  }
 
 }
 
@@ -115,8 +126,7 @@ Pair * nextMap(HashMap * map) {
     if(map->buckets[aux] != NULL){
       map->current=aux;
       return map->buckets[aux];
-    }
-    
+    }  
   }
     return NULL;
 }
