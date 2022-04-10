@@ -371,3 +371,20 @@ hashmap.c:76:8: error: variable ‘aux’ set but not used [-Werror=unused-but-s
 cc1: all warnings being treated as errors
 Compilation failed
 ddc3286
+Sun Apr 10 17:28:22 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:77:6: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+   aux=searchMap(map, key)
+      ^
+hashmap.c:78:3: error: expected ‘;’ before ‘if’
+   if(map->buckets[aux]!=NULL){
+   ^~
+hashmap.c:76:8: error: variable ‘aux’ set but not used [-Werror=unused-but-set-variable]
+   long aux=map->current;
+        ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+85dc560
