@@ -64,14 +64,17 @@ HashMap * createMap(long capacity) {
 }
 
 void eraseMap(HashMap * map,  char * key) {    
-
+  
 
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
-  map->current+=1;
-
-    return Pair*;
+  long aux=hash(key, map->capacity);
+  while(map->buckets[aux] && is_equal(key,map->buckets[aux] == 0)){
+    aux++;
+  }
+  
+  return aux->buckets[aux];
 }
 
 Pair * firstMap(HashMap * map) {
