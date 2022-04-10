@@ -59,7 +59,7 @@ void enlarge(HashMap * map) {
   map->capacity *=2;
   long aux=0;
   map->buckets=(Pair**)malloc(sizeof(Pair)*map->capacity);
-  j=map->size;
+  long j=map->size;
   map->size=0;
   while(aux < map->capacity){
     if(map->size = j) break;
