@@ -48,8 +48,8 @@ void insertMap(HashMap * map, char * key, void * value) {
     if(aux==(map->capacity)){
       aux=0;
     }
+  long aux=map->current;  
   map->buckets[aux]=dato;  
-  dato->key=key;
   dato->value=value;
   map->size++;  
   }
