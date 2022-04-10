@@ -602,3 +602,23 @@ hashmap.c:63:45: error: ‘capacity’ undeclared (first use in this function)
 hashmap.c:63:45: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 a1d0ff2
+Sun Apr 10 20:24:46 UTC 2022: 
+ hashmap.c | 16 +++++++---------
+ 1 file changed, 7 insertions(+), 9 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:63:9: error: ‘auz’ undeclared (first use in this function); did you mean ‘aux’?
+   while(auz < old_buckets->capacity){
+         ^~~
+         aux
+hashmap.c:63:9: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:63:26: error: ‘*old_buckets’ is a pointer; did you mean to use ‘->’?
+   while(auz < old_buckets->capacity){
+                          ^~
+                          ->
+hashmap.c:64:32: error: ‘*old_buckets’ is a pointer; did you mean to use ‘->’?
+     if(map->size == old_buckets->size){
+                                ^~
+                                ->
+Compilation failed
+7ac75a8

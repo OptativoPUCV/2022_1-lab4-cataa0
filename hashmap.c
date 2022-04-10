@@ -57,18 +57,16 @@ void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
   Pair **old_buckets=map->buckets;
   map->capacity *=2;
-  long aux=1;
-  map->buckets=(Pair**)malloc(sizeof(Pair));
-  while(map->buckets != NULL){
-    old_buckets=(Pair**)malloc(sizeof(Pair)*capacity);
-    old_buckets[aux]=NULL;
+  long aux=0;
+  map->buckets=(Pair**)malloc(sizeof(Pair)*map->capacity);
+  map->size=0;
+  while(auz < old_buckets->capacity){
+    if(map->size == old_buckets->size){
+      insertMap(map, old_buckets[aux]->key, old_buckets[aux]->value);
+      map->size++;
+    }  
   }
   aux++;
-  map->size=0;
-  if(old_buckets!=NULL){
-    insertMap(map, old_buckets[aux]->key, old_buckets[aux]->value);
-  }
-
 }
 
 
