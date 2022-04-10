@@ -110,7 +110,7 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-  long aux=;
+  long aux;
   while(aux < map->capacity){
     if(map->buckets[aux] != NULL){
       map->current=aux;
