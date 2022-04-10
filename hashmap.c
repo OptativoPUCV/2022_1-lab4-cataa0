@@ -100,7 +100,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 Pair * firstMap(HashMap * map) {
   long aux=0;
   while(aux < map->capacity){
-    if(map->buckets[aux] != NULL){
+    if(map->buckets[aux] != NULL && map->buckets[aux]->key != NULL){
       map->current=aux;
       return map->buckets[aux];
     }
