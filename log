@@ -266,3 +266,16 @@ Sun Apr 10 16:53:36 UTC 2022:
  tests:  4|4
 total_score: 20/70
 b2b5868
+Sun Apr 10 16:54:23 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:44:8: error: redefinition of ‘aux’
+   long aux=map->current;
+        ^~~
+hashmap.c:43:8: note: previous definition of ‘aux’ was here
+   long aux=hash(key, map->capacity);
+        ^~~
+Compilation failed
+aeae2e2
