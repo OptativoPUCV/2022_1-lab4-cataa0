@@ -279,3 +279,9 @@ hashmap.c:43:8: note: previous definition of ‘aux’ was here
         ^~~
 Compilation failed
 aeae2e2
+Sun Apr 10 17:04:34 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|4
+total_score: 20/70
+b094b0e
