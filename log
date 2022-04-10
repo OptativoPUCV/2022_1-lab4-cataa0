@@ -441,3 +441,9 @@ hashmap.c:78:8: error: invalid type argument of ‘->’ (have ‘Pair {aka stru
         ^~
 Compilation failed
 2475ffa
+Sun Apr 10 17:33:42 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  11|2
+total_score: 50/70
+827b757
