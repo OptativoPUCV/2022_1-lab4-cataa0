@@ -315,3 +315,20 @@ Sun Apr 10 17:19:22 UTC 2022:
  tests:  8|3
 total_score: 40/70
 47b80b2
+Sun Apr 10 17:24:00 UTC 2022: 
+ hashmap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:76:16: error: expected expression before ‘long’
+   map->current=long aux;
+                ^~~~
+hashmap.c:78:18: error: ‘aux’ undeclared (first use in this function)
+     map->buckets[aux]->key=NULL;
+                  ^~~
+hashmap.c:78:18: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:80:3: error: expected ‘;’ before ‘}’ token
+   }
+   ^
+Compilation failed
+26528a7

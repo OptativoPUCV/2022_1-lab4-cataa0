@@ -72,8 +72,12 @@ HashMap * createMap(long capacity) {
     return aux;
 }
 
-void eraseMap(HashMap * map,  char * key) {    
-  
+void eraseMap(HashMap * map,  char * key) { 
+  map->current=long aux;
+  if(searchMap(map, key)){
+    map->buckets[aux]->key=NULL;
+    map->size--
+  }
 
 }
 
