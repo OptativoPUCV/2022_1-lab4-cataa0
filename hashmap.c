@@ -71,7 +71,7 @@ void eraseMap(HashMap * map,  char * key) {
 Pair * searchMap(HashMap * map,  char * key) {   
   map->current+=1
 
-    return NULL;
+    return Pair*;
 }
 
 Pair * firstMap(HashMap * map) {
