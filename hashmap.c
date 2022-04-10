@@ -48,8 +48,8 @@ void insertMap(HashMap * map, char * key, void * value) {
       aux=0;
     }
   map->buckets[aux]=dato;  
-  map->buckets[aux]->key=key;
-  map->buckets[aux]->value=value;
+  dato->key=key;
+  dato->value=value;
   map->size++;  
   }
 }
