@@ -354,3 +354,20 @@ Sun Apr 10 17:25:52 UTC 2022:
  tests:  9|3
 total_score: 40/70
 344ecbf
+Sun Apr 10 17:27:54 UTC 2022: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:77:6: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+   aux=searchMap(map, key)
+      ^
+hashmap.c:78:3: error: expected ‘;’ before ‘if’
+   if(aux!=NULL){
+   ^~
+hashmap.c:76:8: error: variable ‘aux’ set but not used [-Werror=unused-but-set-variable]
+   long aux=map->current;
+        ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+ddc3286
