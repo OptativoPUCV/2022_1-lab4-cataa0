@@ -646,3 +646,14 @@ hashmap.c:64:18: error: self-comparison always evaluates to true [-Werror=tautol
 cc1: all warnings being treated as errors
 Compilation failed
 7226f1b
+Sun Apr 10 20:26:18 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:64:8: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+     if(map->size = map->size){
+        ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+f8f2c3e
