@@ -60,8 +60,8 @@ void enlarge(HashMap * map) {
   long aux=0;
   map->buckets=(Pair**)malloc(sizeof(Pair)*map->capacity);
   map->size=0;
-  while(auz < old_buckets->capacity){
-    if(map->size == old_buckets->size){
+  while(aux < old_buckets[aux]->capacity){
+    if(map->size == old_buckets[aux]->size){
       insertMap(map, old_buckets[aux]->key, old_buckets[aux]->value);
       map->size++;
     }  
