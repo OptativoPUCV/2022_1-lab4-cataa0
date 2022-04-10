@@ -459,3 +459,13 @@ Sun Apr 10 19:41:29 UTC 2022:
  tests:  12|2
 total_score: 50/70
 66e393b
+Sun Apr 10 19:42:50 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:113:12: error: expected expression before ‘;’ token
+   long aux=;
+            ^
+Compilation failed
+d89db6e
