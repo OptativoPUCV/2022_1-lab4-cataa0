@@ -75,7 +75,7 @@ HashMap * createMap(long capacity) {
 void eraseMap(HashMap * map,  char * key) { 
   Pair aux=searchMap(map, key);
   if(aux){
-    map->buckets[aux]->key=NULL;
+    aux->key=NULL;
     (map->size)--;
   }
 

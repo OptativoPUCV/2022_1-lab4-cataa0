@@ -425,3 +425,19 @@ hashmap.c:76:8: error: variable ‘aux’ set but not used [-Werror=unused-but-s
 cc1: all warnings being treated as errors
 Compilation failed
 de93d49
+Sun Apr 10 17:33:22 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:76:12: error: invalid initializer
+   Pair aux=searchMap(map, key);
+            ^~~~~~~~~
+hashmap.c:77:6: error: used struct type value where scalar is required
+   if(aux){
+      ^~~
+hashmap.c:78:8: error: invalid type argument of ‘->’ (have ‘Pair {aka struct Pair}’)
+     aux->key=NULL;
+        ^~
+Compilation failed
+2475ffa
