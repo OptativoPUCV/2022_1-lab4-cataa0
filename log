@@ -696,3 +696,14 @@ hashmap.c:65:8: error: suggest parentheses around assignment used as truth value
 cc1: all warnings being treated as errors
 Compilation failed
 952c310
+Sun Apr 10 20:38:35 UTC 2022: 
+ hashmap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:65:8: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+     if(map->size = j){
+        ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+e16abee
