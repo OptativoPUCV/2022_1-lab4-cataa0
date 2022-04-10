@@ -673,3 +673,15 @@ Sun Apr 10 20:36:50 UTC 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 0ae9d6f
+Sun Apr 10 20:37:51 UTC 2022: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:62:3: error: ‘j’ undeclared (first use in this function); did you mean ‘jn’?
+   j=map->size;
+   ^
+   jn
+hashmap.c:62:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+bf39ced
