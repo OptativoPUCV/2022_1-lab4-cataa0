@@ -779,3 +779,13 @@ hashmap.c:59:14: error: ‘*old_buckets’ is a pointer; did you mean to use ‘
               ->
 Compilation failed
 8e9d064
+Mon Apr 11 01:22:52 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:59:15: error: invalid operands to binary / (have ‘Pair ** {aka struct Pair **}’ and ‘int’)
+   old_buckets /=2;
+               ^~
+Compilation failed
+ab29183
