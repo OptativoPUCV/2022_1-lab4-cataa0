@@ -814,3 +814,8 @@ hashmap.c:59:3: error: unknown type name ‘lon’; did you mean ‘long’?
    long
 Compilation failed
 2f88ffa
+Mon Apr 11 01:27:30 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+237d3fa
