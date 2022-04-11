@@ -803,3 +803,14 @@ hashmap.c:60:3: error: expected ‘,’ or ‘;’ before ‘map’
    ^~~
 Compilation failed
 257e7e2
+Mon Apr 11 01:27:20 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:59:3: error: unknown type name ‘lon’; did you mean ‘long’?
+   lon aux = map->capacity;
+   ^~~
+   long
+Compilation failed
+2f88ffa
