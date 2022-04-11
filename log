@@ -754,3 +754,17 @@ hashmap.c:60:3: error: expected ‘;’ before ‘map’
    ^~~
 Compilation failed
 7da745c
+Mon Apr 11 01:22:05 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:59:14: error: ‘*old_buckets’ is a pointer; did you mean to use ‘->’?
+   old_buckets->capacity /=2
+              ^~
+              ->
+hashmap.c:60:3: error: expected ‘;’ before ‘map’
+   map->capacity *=2;
+   ^~~
+Compilation failed
+62e7ac9
