@@ -739,3 +739,18 @@ Mon Apr 11 01:20:34 UTC 2022:
  1 file changed, 15 insertions(+), 14 deletions(-)
  tests:  0|0
 c32ecdc
+Mon Apr 11 01:21:53 UTC 2022: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:59:3: error: ‘old_bucket’ undeclared (first use in this function); did you mean ‘old_buckets’?
+   old_bucket->capacity /=2
+   ^~~~~~~~~~
+   old_buckets
+hashmap.c:59:3: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:60:3: error: expected ‘;’ before ‘map’
+   map->capacity *=2;
+   ^~~
+Compilation failed
+7da745c
