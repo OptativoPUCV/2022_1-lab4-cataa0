@@ -789,3 +789,17 @@ hashmap.c:59:15: error: invalid operands to binary / (have ‘Pair ** {aka struc
                ^~
 Compilation failed
 ab29183
+Mon Apr 11 01:27:06 UTC 2022: 
+ hashmap.c | 7 +------
+ 1 file changed, 1 insertion(+), 6 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:59:3: error: unknown type name ‘lon’; did you mean ‘long’?
+   lon aux = map->capacity
+   ^~~
+   long
+hashmap.c:60:3: error: expected ‘,’ or ‘;’ before ‘map’
+   map->capacity *=2;
+   ^~~
+Compilation failed
+257e7e2
