@@ -834,3 +834,18 @@ Mon Apr 11 01:35:07 UTC 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 bbf80d4
+Mon Apr 11 01:36:14 UTC 2022: 
+ hashmap.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:63:3: error: ‘i’ undeclared (first use in this function)
+   i=0;
+   ^
+hashmap.c:63:3: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:58:10: error: variable ‘old_buckets’ set but not used [-Werror=unused-but-set-variable]
+   Pair **old_buckets=map->buckets;
+          ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4206e8b
